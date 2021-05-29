@@ -1,7 +1,4 @@
-let xhr = new XMLHttpRequest();
-xhr.open('get', 'https://jsonplaceholder.typicode.com/posts/1');
-xhr.send();
-
-xhr.onload = function() {
-    console.log(xhr.response);
-};
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});
