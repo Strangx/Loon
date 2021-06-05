@@ -1,4 +1,4 @@
-let channels = ["08sTZS03Ji84NTJl"];
+let channels = ["TestFlightX"];
 let maxMedias = 3;
 let alwaysNotice = false;
 
@@ -18,7 +18,7 @@ const updated = JSON.parse($.read("updated") || "{}");
 Promise.all(
     channels.map(async (channel) => {
         $.log(`Checking channel ${channel}...`);
-        await $.http.get(`https://rsshub.app/telegram/channel/${channel}`)
+        await $.http.get(`https://strangerss.herokuapp.com/telegram/channel/${channel}`)
             .then((response) => {
                 const body = response.body;
                 const channelLink = `https://t.me/s/${channel}`;
@@ -56,7 +56,7 @@ Promise.all(
                 $.write(JSON.stringify(updated), "updated");
             })
             .catch((error) => {
-                $.notify("[Telegram]", "", `❌ 未找到频道: ${channel}`);
+                $.notify("[Telegram]", "", `❌ Channel not found: ${channel}`);
                 $.error(error);
             });
     })
