@@ -1,9 +1,4 @@
-[Mitm]
-hostname = *-buy.itunes.apple.com, api.unlimapps.com, www.google.*, encrypted.google.*,api.textnow.me,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com,*.googlevideo.com
-
 [Script]
-
-http-response (https:\/\/www\.google\..*)|(https:\/\/encrypted\.google\..*) script-path = https://raw.githubusercontent.com/phd91105/Scripts/master/QuanX/scripting/Endless_Google.user.js, requires-body = true
 
 http-response https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity? script-path = https://raw.githubusercontent.com/langkhach270389/Scripting/master/altstore.js, requires-body = true
 
@@ -12,3 +7,21 @@ http-response ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* script-path=https:/
 http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://raw.githubusercontent.com/Strangx/Loon/main/YouTube.js, requires-body=true, timeout=10, tag=YouTube
 
 network-changed script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/nextdns_linkedip.js,tag=nextdns_linkedip
+
+[URL Rewrite]
+
+(?<=&mcc_mnc=)4 2 307
+(?<=_region=)CN(?=&) US 307
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+
+ctier=[A-Z] citer=A 302
+
+
+[Rule]
+
+URL-REGEX,^https:\/\/.+\.googlevideo\.com\/.+oad=,REJECT
+
+[MITM]
+
+hostname = *-buy.itunes.apple.com, api.unlimapps.com, www.google.*, encrypted.google.*,api.textnow.me,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com,*.googlevideo.com
