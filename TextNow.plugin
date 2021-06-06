@@ -4,4 +4,4 @@ http-response ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* script-path=https:/
 
 [Mitm]
 
-api.textnow.me
+hostname = api.textnow.me
