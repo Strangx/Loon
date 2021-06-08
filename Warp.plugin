@@ -1,0 +1,8 @@
+[Host]
+api.cloudflareclient.com = server: 1.1.1.1
+
+[Script]
+cron "*/15 * * * * *" script-path= https://cdn.jsdelivr.net/gh/Strangx/Loon@main/warp++.js, enabled=true, tag=Warp
+
+[MITM]
+hostname=%APPEND% api.cloudflareclient.com
