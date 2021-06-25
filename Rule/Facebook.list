@@ -1,0 +1,8 @@
+DOMAIN-KEYWORD,facebook
+DOMAIN-KEYWORD,fbcdn
+DOMAIN-KEYWORD,twitter
+DOMAIN-KEYWORD,twimg
+USER-AGENT,Twitter*
+USER-AGENT, mediaserverd*
+IP-CIDR,91.108.0.0/16,no-resolve
+DOMAIN-SUFFIX,t.co
