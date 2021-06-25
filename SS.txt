@@ -1,0 +1,5 @@
+Singapore🇸🇬 ➤ DigitalOcean = Shadowsocks,139.59.253.61,49198,chacha20-ietf-poly1305,"5zxbtNuh8bwV",fast-open=false,udp=false
+
+United States🇺🇸 ➤ NewYork = Shadowsocks,ftp.vipkiller.page,34687,aes-256-gcm,"txmK9WhwP6WPhP7hqSBLVxpN",fast-open=false,udp=false
+
+Japan🇯🇵 ➤ Tokyo = Shadowsocks,138.199.22.141,34687,aes-256-gcm,"txmK9WhwP6WPhP7hqSBLVxpN",fast-open=false,udp=false
